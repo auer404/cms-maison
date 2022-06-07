@@ -1,0 +1,27 @@
+CMS Maison - 01/06 - À faire
+----------------------------
+
+
+• Créer un fichier get_content.php (à ranger dans le dossier php_scripts hors-admin) dans lequel sera déclarée une fonction du même nom.
+
+Celle-ci devra accepter deux paramètres : un identifiant numérique et un nom de colonne.
+
+Exemple de résultat attendu : get_content(2, "title") devra récupérer ce qui se trouve (côté BDD - table contenus) dans la colonne "title" pour la ligne dont la colonne "id" contient la valeur 2 - c'est-à-dire le titre du contenu d'identifiant 2. Utiliser cette fonction pour remplir les bons emplacements sur l'index.php créé au point précédent.
+
+Suggestion : faire en sorte que la fonction retourne la valeur voulue plutôt que de directement l'afficher. Cela permettra plus de flexibilité, comme dans cet exemple où on se permet de tester un résultat avant de l'utiliser :
+
+$imgsrc = get_content(7, "image");
+
+if ($imgsrc != "") {
+	echo "<img src='$imgsrc'>";
+} else {
+	echo "<p>Pas d'image</p>";
+}
+
+
+
+• Permettre à l'index.php nouvellement créé de montrer le titre, le bloc texte et l'éventuelle image correspondant à une ligne dans la BDD, en fonction d'un paramètre "id" trouvé dans l'url. Si cet id ne correspond à rien dans la BDD, indiquer que "la page n'existe pas".
+
+
+
+• Ajouter sur cet index.php un menu, généré en passant en revue toutes les lignes de la table des contenus (on peut s'inspirer de la liste mise en place sur admin/index.php). Le but étant de pouvoir naviguer entre les différents contenus sous forme de "pages" d'un site (sans vraiment quitter l'index en réalité).

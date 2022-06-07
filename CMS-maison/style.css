@@ -1,0 +1,74 @@
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color:brown;
+}
+
+header {
+    display:flex;
+    position:relative;
+}
+
+.ornament_dots {
+   position:absolute;
+    width:80%;
+    height:0;
+    left:10%;
+    border-bottom:10px brown dotted;
+}
+
+header .ornament_dots {
+    bottom:25px;
+}
+
+footer .ornament_dots {
+    top:25px;
+}
+
+.header_col {
+    width:50%;
+    flex-shrink:0;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size:9vw;
+    text-shadow:brown 0 0.1em;
+    margin:0;
+}
+
+.header_col img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+#h1_container {
+    text-align:right;
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:2vw;
+    box-sizing:border-box;
+}
+
+main {
+    padding:0 25px;
+}
+
+#main_contents {
+    margin:100px auto;
+    max-width:800px;
+    font-size:2rem;
+    padding:50px 0;
+    border-top:10px brown dotted;
+    border-bottom:10px brown dotted;
+}
+
+footer {
+    min-height:150px;
+    background-color:black;
+    position:relative;
+}

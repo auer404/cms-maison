@@ -1,0 +1,48 @@
+body {
+    margin:0;
+    font-family:sans-serif;
+}
+
+header {
+    padding:20px; background-color:lightgray;
+}
+
+main {
+    margin:20px;
+}
+
+form {
+    border:1px solid black;
+    max-width:500px; margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    padding:10px; box-sizing:border-box;
+}
+
+form.error {
+    border:10px solid red;
+}
+
+li form {
+    display:inline-block; margin-left:10px;
+    border:none; padding:none; margin:0;
+}
+
+form img {
+    width:50%; margin-top:10px;
+    align-self:center;
+}
+
+textarea {
+    min-height:200px;
+    resize:vertical;
+    font-family:sans-serif;
+}
+
+input , textarea {
+    margin-top:10px;
+}
+
+li form input {
+    margin-top:0;
+}
