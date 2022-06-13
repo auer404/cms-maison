@@ -1,3 +1,11 @@
+<?php
+
+include("php_scripts/check-id.php");
+// Ceci permet de vérifier la présence d'un id dans l'url et d'automatiquement renseigner ce qui y est trouvé dans une variable $id
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="">
 
@@ -18,16 +26,30 @@
 <body>
 	
 	<header>
+    
+    <?php
+    
+        /* Ici, générer un menu.
+        
+        Il doit se présenter sous la forme d'une liste de liens, dans un élément nav.
+        
+        La liste peut être générée comme sur admin/index.php : un élément de liste contenant un lien doit exister par ligne disponible dans la table des contenus.
+        
+        Si il n'existe aucune ligne dans la table, ce n'est pas la peine de générer quoi que ce soit (pas de nav, etc).
+        
+        */
+        
+    ?>
 	    
 	    <div class="header_col" id = "h1_container">
 	        
-	        <h1>Le titre sera affiché ici</h1>
+	        <h1><?php the_title(); ?></h1>
 	        
 	    </div>
 	    
 	    <div class="header_col">
 	        
-	        <img src="https://picsum.photos/800">
+	        <img src="<?php the_image_src(); ?>">
 	        
 	    </div>
 	    
@@ -38,9 +60,7 @@
 	<main>
 	    
 	    <div id="main_contents">
-	        Le bloc de texte (contenu principal) sera affiché ici. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, dolores, non impedit asperiores perspiciatis reiciendis dolorem cupiditate architecto explicabo quo sapiente, iste numquam error rerum repellat dolore. Nulla, doloribus, porro.
-	        <br><br>
-	        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quis harum dolorum ad at eos veritatis officia delectus quos porro, beatae aliquam suscipit aperiam, saepe adipisci ex. Corporis, qui, esse.
+	        <?php the_content(); ?>
 	    </div>
 	    
 	</main>
